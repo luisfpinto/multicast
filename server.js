@@ -18,7 +18,7 @@ server.bind(function() {
 
 function broadcastNew() {
   var message = new Buffer(news[Math.floor(Math.random()*news.length)]);
-  server.send(message, 0, message.length, 5007, "224.1.1.1");
+  server.send(message, 0, message.length, 3000, "239.255.255.250");
   console.log("Sent " + message + " to the wire...");
     //server.close();
   }
